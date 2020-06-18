@@ -155,7 +155,7 @@ public class Solution {
     }
 
     /**
-     *输入一个字符串，打印出该字符串中字符的所有排列。
+     * 输入一个字符串，打印出该字符串中字符的所有排列。
      * 你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
      * 输入：s = "abc"
      * 输出：["abc","acb","bac","bca","cab","cba"]
@@ -230,10 +230,11 @@ public class Solution {
 
     /**
      * 给定一个二叉树，找出其最小深度。
-     *
+     * <p>
      * 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
-     *
+     * <p>
      * 说明: 叶子节点是指没有子节点的节点。
+     *
      * @param root
      * @return
      */
@@ -250,6 +251,12 @@ public class Solution {
         return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
     }
 
+    /**
+     * 通过Queue方式实现找出最小深度
+     *
+     * @param root
+     * @return
+     */
     public int minDepth2(TreeNode root) {
         if (root == null)
             return 0;
@@ -273,7 +280,41 @@ public class Solution {
         return -1;
     }
 
+    /**
+     * 给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。
+     * @param words
+     * @return
+     */
+    public String[] findWords(String[] words) {
 
+        List<String> list = new ArrayList<>();
+        String[] refs = new String[]{
+                "qwertyuiopQWERTYUIOP",
+                "asdfghjklASDFGHJKL",
+                "zxcvbnmZXCVBNM"
+        };
+
+        for (int i = 0; i < words.length; i++) {//循环遍历输入字符串
+            char[] temp = words[i].toCharArray();//将输入字符串转化为字符数组
+            String line = null;
+            boolean add = true;
+            for(String ref : refs){
+                if(ref.indexOf(temp[0]) > -1){
+                    line = ref;
+                    break;
+                }
+            }
+            for (int j = 0; j < temp.length; j++) {//循环遍历字符数组
+                if(line.indexOf(temp[j]) < 0){
+                    add = false;
+                }
+            }
+            if (add){
+                list.add(words[i]);
+            }
+        }
+        return list.toArray(new String[list.size()]);
+    }
 }
 
 
