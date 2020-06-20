@@ -1,4 +1,3 @@
-import javax.swing.tree.TreeNode;
 import java.util.*;
 
 /**
@@ -238,7 +237,7 @@ public class Solution {
      * @param root
      * @return
      */
-    public int minDepth(TreeNode root) {
+    /*public int minDepth(TreeNode root) {
         if (root == null)
             return 0;
         //左子树的最小深度
@@ -250,14 +249,14 @@ public class Solution {
         //如果left和right都不为0，说明他有两个子节点，我们只需要返回最小深度的+1即可。
         return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
     }
-
+*/
     /**
      * 通过Queue方式实现找出最小深度
      *
      * @param root
      * @return
      */
-    public int minDepth2(TreeNode root) {
+   /* public int minDepth2(TreeNode root) {
         if (root == null)
             return 0;
         Queue<TreeNode> queue = new LinkedList<>();
@@ -278,7 +277,7 @@ public class Solution {
             }
         }
         return -1;
-    }
+    }*/
 
     /**
      * 给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。
@@ -315,6 +314,87 @@ public class Solution {
         }
         return list.toArray(new String[list.size()]);
     }
+
+
+    //六种排序算法
+
+    int ar[] = {5,6,72,3,1,56,};
+
+    /**
+     *   冒泡排序算法
+     *     a、冒泡排序，是通过每一次遍历获取最大/最小值
+     *
+     * 　　b、将最大值/最小值放在尾部/头部
+     *
+     * 　　c、然后除开最大值/最小值，剩下的数据在进行遍历获取最大/最小值
+     *
+     * 　　d、代码实现
+     */
+    public static int[] bubbling(int[] arr){
+        int temp;
+        for (int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr.length-1-i;){
+                if (arr[j] > arr[j++]){
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    /**
+     *   选择排序算法
+     *     a、将第一个值看成最小值
+     *
+     * 　　b、然后和后续的比较找出最小值和下标
+     *
+     * 　　c、交换本次遍历的起始值和最小值
+     *
+     * 　　d、说明：每次遍历的时候，将前面找出的最小值，看成一个有序的列表，后面的看成无序的列表，然后每次遍历无序列表找出最小值。
+     *
+     * 　　e、代码实现
+     */
+    public static int[] selection(int[] arr){
+
+        int temp;
+        for (int i = 0; i < arr.length; i++){
+            for (int j = i; j < arr.length; j++){
+                if (arr[i] > arr[j]){
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    /**
+     *   插入排序算法
+     *     a、默认从第二个数据开始比较。
+     *
+     * 　　b、如果第二个数据比第一个小，则交换。然后在用第三个数据比较，如果比前面小，则插入（狡猾）。否则，退出循环
+     *
+     * 　　c、说明：默认将第一数据看成有序列表，后面无序的列表循环每一个数据，如果比前面的数据小则插入（交换）。否则退出。
+     *
+     * 　　d、代码实现
+     */
+    public static int[] insert(int[] arr){
+        int temp;
+        for (int i = 1; i < arr.length; i++){
+            for (int j = i; j > 0; j--){
+                if (arr[j-1] > arr[j]){
+                    temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
 }
 
 
