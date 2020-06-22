@@ -281,6 +281,7 @@ public class Solution {
 
     /**
      * 给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。
+     *
      * @param words
      * @return
      */
@@ -297,18 +298,18 @@ public class Solution {
             char[] temp = words[i].toCharArray();//将输入字符串转化为字符数组
             String line = null;
             boolean add = true;
-            for(String ref : refs){
-                if(ref.indexOf(temp[0]) > -1){
+            for (String ref : refs) {
+                if (ref.indexOf(temp[0]) > -1) {
                     line = ref;
                     break;
                 }
             }
             for (int j = 0; j < temp.length; j++) {//循环遍历字符数组
-                if(line.indexOf(temp[j]) < 0){
+                if (line.indexOf(temp[j]) < 0) {
                     add = false;
                 }
             }
-            if (add){
+            if (add) {
                 list.add(words[i]);
             }
         }
@@ -318,26 +319,26 @@ public class Solution {
 
     //六种排序算法
 
-    int ar[] = {5,6,72,3,1,56,};
+    int ar[] = {5, 6, 72, 3, 1, 56,};
 
     /**
-     *   冒泡排序算法
-     *     a、冒泡排序，是通过每一次遍历获取最大/最小值
-     *
+     * 冒泡排序算法
+     * a、冒泡排序，是通过每一次遍历获取最大/最小值
+     * <p>
      * 　　b、将最大值/最小值放在尾部/头部
-     *
+     * <p>
      * 　　c、然后除开最大值/最小值，剩下的数据在进行遍历获取最大/最小值
-     *
+     * <p>
      * 　　d、代码实现
      */
-    public static int[] bubbling(int[] arr){
+    public static int[] bubbling(int[] arr) {
         int temp;
-        for (int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr.length-1-i;){
-                if (arr[j] > arr[j++]){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1 - i; ) {
+                if (arr[j] > arr[j++]) {
                     temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
@@ -345,23 +346,23 @@ public class Solution {
     }
 
     /**
-     *   选择排序算法
-     *     a、将第一个值看成最小值
-     *
+     * 选择排序算法
+     * a、将第一个值看成最小值
+     * <p>
      * 　　b、然后和后续的比较找出最小值和下标
-     *
+     * <p>
      * 　　c、交换本次遍历的起始值和最小值
-     *
+     * <p>
      * 　　d、说明：每次遍历的时候，将前面找出的最小值，看成一个有序的列表，后面的看成无序的列表，然后每次遍历无序列表找出最小值。
-     *
+     * <p>
      * 　　e、代码实现
      */
-    public static int[] selection(int[] arr){
+    public static int[] selection(int[] arr) {
 
         int temp;
-        for (int i = 0; i < arr.length; i++){
-            for (int j = i; j < arr.length; j++){
-                if (arr[i] > arr[j]){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
                     temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
@@ -372,22 +373,22 @@ public class Solution {
     }
 
     /**
-     *   插入排序算法
-     *     a、默认从第二个数据开始比较。
-     *
+     * 插入排序算法
+     * a、默认从第二个数据开始比较。
+     * <p>
      * 　　b、如果第二个数据比第一个小，则交换。然后在用第三个数据比较，如果比前面小，则插入（狡猾）。否则，退出循环
-     *
+     * <p>
      * 　　c、说明：默认将第一数据看成有序列表，后面无序的列表循环每一个数据，如果比前面的数据小则插入（交换）。否则退出。
-     *
+     * <p>
      * 　　d、代码实现
      */
-    public static int[] insert(int[] arr){
+    public static int[] insert(int[] arr) {
         int temp;
-        for (int i = 1; i < arr.length; i++){
-            for (int j = i; j > 0; j--){
-                if (arr[j-1] > arr[j]){
-                    temp = arr[j-1];
-                    arr[j-1] = arr[j];
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arr[j - 1] > arr[j]) {
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
                     arr[j] = temp;
                 }
             }
@@ -396,23 +397,23 @@ public class Solution {
     }
 
     /**
-     *   希尔排序算法
-     *     a、基本上和插入排序一样的道理
-     *
+     * 希尔排序算法
+     * a、基本上和插入排序一样的道理
+     * <p>
      * 　　b、不一样的地方在于，每次循环的步长，通过减半的方式来实现
-     *
+     * <p>
      * 　　c、说明：基本原理和插入排序类似，不一样的地方在于。通过间隔多个数据来进行插入排序。
-     *
+     * <p>
      * 　　d、代码实现
      */
-    public static int[] Hill(int[] arr){
+    public static int[] Hill(int[] arr) {
 
-        for (int step = arr.length/2; step > 0; step /= 2){
-            for (int i = 0; i < arr.length&&(i+step < arr.length); i++){
-                if (arr[i] > arr[i+step]){
+        for (int step = arr.length / 2; step > 0; step /= 2) {
+            for (int i = 0; i < arr.length && (i + step < arr.length); i++) {
+                if (arr[i] > arr[i + step]) {
                     int temp = arr[i];
-                    arr[i] = arr[i+step];
-                    arr[i+step] = temp;
+                    arr[i] = arr[i + step];
+                    arr[i + step] = temp;
                 }
             }
         }
@@ -420,19 +421,19 @@ public class Solution {
     }
 
     /**
-     *   快速排序算法
-     *     a、确认列表第一个数据为中间值，第一个值看成空缺（低指针空缺）。
-     *
+     * 快速排序算法
+     * a、确认列表第一个数据为中间值，第一个值看成空缺（低指针空缺）。
+     * <p>
      * 　　b、然后在剩下的队列中，看成有左右两个指针（高低）。
-     *
+     * <p>
      * 　　c、开始高指针向左移动，如果遇到小于中间值的数据，则将这个数据赋值到低指针空缺，并且将高指针的数据看成空缺值（高指针空缺）。然后先向右移动一下低指针，并且切换低指针移动。
-     *
+     * <p>
      * 　　d、当低指针移动到大于中间值的时候，赋值到高指针空缺的地方。然后先高指针向左移动，并且切换高指针移动。重复c、d操作。
-     *
+     * <p>
      * 　　e、直到高指针和低指针相等时退出，并且将中间值赋值给对应指针位置。
-     *
+     * <p>
      * 　　f、然后将中间值的左右两边看成行的列表，进行快速排序操作。
-     *
+     * <p>
      * 　　g、代码实现
      */
     public static void Rapid(int[] array, int left, int right) {
@@ -471,6 +472,93 @@ public class Solution {
         Rapid(array, i + 1, right);
     }
 
+    /**
+     * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+     *
+     * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum1(int[] nums, int target) {
+        List<Integer> lists = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int lack = target - nums[i];
+            for (int j = 0; j < nums.length; j++) {
+                if (lack == nums[j] && !lists.contains(j)) {
+                    lists.add(i);
+                    lists.add(j);
+                }
+            }
+        }
+        int[] res = new int[lists.size()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = lists.get(i);
+        }
+        return res;
+    }
+
+    public int[] twoSum2(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == target - nums[i]) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+    public int[] twoSum3(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(nums[i], i);
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+    /**
+     * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，
+     * 并且它们的每个节点只能存储 一位 数字。
+     *
+     * 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
+     *
+     * 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。
+     */
+    public class ListNode {
+        int      val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
+    public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode p = l1, q = l2, curr = dummyHead;
+        int carry = 0;
+        while (p != null || q != null) {
+            int x = (p != null) ? p.val : 0;
+            int y = (q != null) ? q.val : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+            if (p != null) p = p.next;
+            if (q != null) q = q.next;
+        }
+        if (carry > 0) {
+            curr.next = new ListNode(carry);
+        }
+        return dummyHead.next;
+    }
 
 }
 
