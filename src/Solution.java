@@ -474,7 +474,7 @@ public class Solution {
 
     /**
      * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
-     *
+     * <p>
      * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
      *
      * @param nums
@@ -526,9 +526,9 @@ public class Solution {
     /**
      * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，
      * 并且它们的每个节点只能存储 一位 数字。
-     *
+     * <p>
      * 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
-     *
+     * <p>
      * 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。
      */
     public class ListNode {
@@ -559,6 +559,125 @@ public class Solution {
         }
         return dummyHead.next;
     }
+
+    /**
+     * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+     *
+     * 示例 1:
+     *
+     * 输入: "abcabcbb"
+     * 输出: 3
+     * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring(String s) {
+
+        int max = 0;
+        List<Integer> list = new ArrayList<>();
+        char[] str = s.toCharArray();
+        for (int i = 0; i < str.length; i++){
+            list.add(Length(s,i));
+        }
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()){
+            int temp = iterator.next();
+            if (temp >= max){
+                max = temp;
+            }
+        }
+        return max;
+    }
+    public static int Length(String s,int index){
+        List<Character> list = new ArrayList<>();
+        char[] str = s.toCharArray();
+        for (int i = index; i < str.length; i++){
+            if (!list.contains(str[i])){
+                list.add(str[i]);
+            }else {
+                break;
+            }
+        }
+        return list.size();
+    }
+
+    /**
+     * 官方版本
+     */
+    public int lengthOfLongestSubstring1(String s) {
+        // 哈希集合，记录每个字符是否出现过
+        Set<Character> occ = new HashSet<Character>();
+        int n = s.length();
+        // 右指针，初始值为 -1，相当于我们在字符串的左边界的左侧，还没有开始移动
+        int rk = -1, ans = 0;
+        for (int i = 0; i < n; ++i) {
+            if (i != 0) {
+                // 左指针向右移动一格，移除一个字符
+                occ.remove(s.charAt(i - 1));
+            }
+            while (rk + 1 < n && !occ.contains(s.charAt(rk + 1))) {
+                // 不断地移动右指针
+                occ.add(s.charAt(rk + 1));
+                ++rk;
+            }
+            // 第 i 到 rk 个字符是一个极长的无重复字符子串
+            ans = Math.max(ans, rk - i + 1);
+        }
+        return ans;
+    }
+
+    /**
+     * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
+     *
+     * 请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+     *
+     * 你可以假设 nums1 和 nums2 不会同时为空。
+     *
+     */
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+        int m = nums1.length;
+        int n = nums2.length;
+        int len = m + n;
+        int left = -1, right = -1;
+        int aStart = 0, bStart = 0;
+        for (int i = 0; i <= len / 2; i++) {
+            left = right;
+            if (aStart < m&&(bStart >= n || nums1[aStart] < nums2[bStart])){
+                right = nums1[aStart++];
+            }else {
+                right = nums2[bStart++];
+            }
+        }
+        if (len % 2 == 0){
+            return (left+right)/2.0;
+        }else{
+            return right;
+        }
+    }
+
+    public double findMedianSortedArrays1(int[] A, int[] B) {
+        int m = A.length;
+        int n = B.length;
+        int len = m + n;
+        int left = -1, right = -1;
+        int aStart = 0, bStart = 0;
+        for (int i = 0; i <= len / 2; i++) {
+            left = right;
+            if (aStart < m && (bStart >= n || A[aStart] < B[bStart])) {
+                right = A[aStart++];
+            } else {
+                right = B[bStart++];
+            }
+        }
+        if ((len & 1) == 0)
+            return (left + right) / 2.0;
+        else
+            return right;
+    }
+
+
 
 }
 
