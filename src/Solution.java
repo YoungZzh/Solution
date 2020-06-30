@@ -562,9 +562,9 @@ public class Solution {
 
     /**
      * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
-     *
+     * <p>
      * 示例 1:
-     *
+     * <p>
      * 输入: "abcabcbb"
      * 输出: 3
      * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
@@ -577,25 +577,26 @@ public class Solution {
         int max = 0;
         List<Integer> list = new ArrayList<>();
         char[] str = s.toCharArray();
-        for (int i = 0; i < str.length; i++){
-            list.add(Length(s,i));
+        for (int i = 0; i < str.length; i++) {
+            list.add(Length(s, i));
         }
         Iterator<Integer> iterator = list.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             int temp = iterator.next();
-            if (temp >= max){
+            if (temp >= max) {
                 max = temp;
             }
         }
         return max;
     }
-    public static int Length(String s,int index){
+
+    public static int Length(String s, int index) {
         List<Character> list = new ArrayList<>();
         char[] str = s.toCharArray();
-        for (int i = index; i < str.length; i++){
-            if (!list.contains(str[i])){
+        for (int i = index; i < str.length; i++) {
+            if (!list.contains(str[i])) {
                 list.add(str[i]);
-            }else {
+            } else {
                 break;
             }
         }
@@ -629,13 +630,20 @@ public class Solution {
 
     /**
      * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
-     *
+     * <p>
      * 请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
-     *
+     * <p>
      * 你可以假设 nums1 和 nums2 不会同时为空。
-     *
+     * <p>
+     * 循环中该怎么写，什么时候 A 数组后移，什么时候 B 数组后移。用 aStart 和 bStart 分别表示当前指向 A
+     * 数组和 B 数组的位置。如果 aStart 还没有到最后并且此时 A 位置的数字小于 B 位置的数组，那么就可以后
+     * 移了。也就是aStart＜m&&A[aStart]< B[bStart]。
+     * <p>
+     * 但如果 B 数组此刻已经没有数字了，继续取数字 B[ bStart ]，则会越界，所以判断下 bStart 是否大于数组
+     * 长度了，这样 || 后边的就不会执行了，也就不会导致错误了，所以增加为
+     * aStart＜m&&(bStart) >= n||A[aStart]<B[bStart]) 。
      */
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    /*public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         int m = nums1.length;
         int n = nums2.length;
@@ -655,8 +663,7 @@ public class Solution {
         }else{
             return right;
         }
-    }
-
+    }*/
     public double findMedianSortedArrays1(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;
@@ -677,8 +684,44 @@ public class Solution {
             return right;
     }
 
-
-
+    /**
+     * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+     *
+     * 示例 1：
+     *
+     * 输入: "babad"
+     * 输出: "bab"
+     * 注意: "aba" 也是一个有效答案。
+     * @param s
+     * @return
+     */
+    public String longestPalindrome(String s) {
+        if(s.length() < 2){
+            return s;
+        }
+        int max=1;
+        int index = 0;
+        char[] str = s.toCharArray();
+        for(int i=0;i<=str.length-1;i++){
+            for(int j=i+1;j<str.length;j++){
+                if(j-i+1>max && validPalindromic(str,i,j)){
+                    index = i;
+                    max = j-i+1;
+                }
+            }
+        }
+        return s.substring(index,max+index);
+    }
+    private boolean validPalindromic(char[] charArray, int left, int right) {
+        while (left < right) {
+            if (charArray[left] != charArray[right]) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
 }
 
 
