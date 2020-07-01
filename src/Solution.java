@@ -722,6 +722,41 @@ public class Solution {
         }
         return true;
     }
+
+
+    /**
+     * 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+     *
+     * 比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
+     *
+     * L   C   I   R
+     * E T O E S I I G
+     * E   D   H   N
+     *
+     */
+    public String convert(String s, int numRows) {
+
+        if(numRows<2){
+            return s;
+        }
+        List<StringBuilder> list = new ArrayList<>();
+        int i = 0;
+        int flag = -1;
+        for(int n=0;n<numRows;n++){
+            list.add(new StringBuilder());
+        }
+        for(char c : s.toCharArray()){
+            list.get(i).append(c);
+            if(i==0||i==numRows-1)
+                flag = -flag;
+            i += flag;
+        }
+        StringBuilder res = new StringBuilder();
+        for(StringBuilder row : list){
+            res.append(row);
+        }
+        return res.toString();
+    }
 }
 
 
