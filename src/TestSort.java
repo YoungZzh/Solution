@@ -5,16 +5,22 @@
 public class TestSort {
 
     public static void main(String[] args) {
-        int ar[] = {5, 6, 72, 3, 1, 56,};
-        Solution.Rapid(ar, 0, ar.length - 1);
-        for (int i = 0; i < ar.length; i++) {
-            System.out.println(ar[i]);
-        }
 
+        System.out.println(reverse(-2147483648));
     }
+    public static int reverse(int x) {
+        long temp = 0;
 
+        while(x != 0){
+            int pop = x % 10;
+            temp = temp * 10 + pop;
 
-
-
+            if(temp > Integer.MAX_VALUE || temp < Integer.MIN_VALUE){
+                return 0;
+            }
+            x /= 10;
+        }
+        return (int)temp;
+    }
 
 }

@@ -757,6 +757,35 @@ public class Solution {
         }
         return res.toString();
     }
+
+    /**
+     * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
+     *
+     * 我们可以一次构建反转整数的一位数字。在这样做的时候，我们可以预先检查向原整数
+     * 附加另一位数字是否会导致溢出。
+     * 示例 1:
+     *
+     * 输入: 123
+     * 输出: 321
+     *  示例 2:
+     *
+     * 输入: -123
+     * 输出: -321
+     * @param x
+     * @return
+     */
+    public int reverse(int x) {
+        long temp = 0;
+        while (x != 0){
+            int pop = x % 10;
+            temp = temp*10 + pop;
+            if (temp > Integer.MAX_VALUE || temp < Integer.MIN_VALUE){
+                return 0;
+            }
+            x /= 10;
+        }
+        return (int)temp;
+    }
 }
 
 
