@@ -883,20 +883,61 @@ public class Solution {
 
     public boolean isMatch(String s, String p) {
         //如果正则串p为空字符串s也为空这匹配成功，如果正则串p为空但是s不是空则说明匹配失败
-        if (p.isEmpty())return s.isEmpty();
+        if (p.isEmpty()) return s.isEmpty();
         //判断s和p的首字符是否匹配，注意要先判断s不为空
-        boolean headMatched=!s.isEmpty()&&(s.charAt(0)==p.charAt(0)||p.charAt(0)=='.');
-        if (p.length()>=2&&p.charAt(1)=='*'){//如果p的第一个元素的下一个元素是*
+        boolean headMatched = !s.isEmpty() && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
+        if (p.length() >= 2 && p.charAt(1) == '*') {//如果p的第一个元素的下一个元素是*
             //则分别对两种情况进行判断
-            return isMatch(s,p.substring(2))||
-                    (headMatched&&isMatch(s.substring(1),p));
-        }else if (headMatched){//否则，如果s和p的首字符相等
-            return isMatch(s.substring(1),p.substring(1));
-        }else {
+            return isMatch(s, p.substring(2)) ||
+                    (headMatched && isMatch(s.substring(1), p));
+        } else if (headMatched) {//否则，如果s和p的首字符相等
+            return isMatch(s.substring(1), p.substring(1));
+        } else {
             return false;
         }
     }
 
+    /**
+     * 给你 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 
+     * 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+     * <p>
+     * 说明：你不能倾斜容器，且 n 的值至少为 2。
+     * <p>
+     * 示例：
+     * <p>
+     * 输入：[1,8,6,2,5,4,8,3,7]
+     * 输出：49
+     *
+     * @param height
+     * @return
+     */
+    public int maxArea(int[] height) {
+        int max = 0, high = 0;
+        for (int i = 0; i < height.length - 1; i++) {
+            for (int j = i + 1; j < height.length; j++) {
+                int temp = 0;
+                if (height[j] > height[i])
+                    high = height[i];
+                else high = height[j];
+                temp = high * (j - i);
+                if (temp > max) {
+                    max = temp;
+                }
+            }
+        }
+        return max;
+
+    }
+
+    public int maxArea2(int[] height){
+        int i = 0, j = height.length-1, res = 0;
+        while(i<j){
+            res = height[i] < height[j] ?
+                    Math.max(res,(j-i)*height[i++]) :
+                    Math.max(res,(j-i)*height[j--]);
+        }
+        return res;
+    }
 
 }
 
