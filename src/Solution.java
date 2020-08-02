@@ -964,20 +964,47 @@ public class Solution {
      *
      * 输入: 3
      * 输出: "III"
+     * @param num
      */
-    public String intToRoman(int num) {
+    public static String intToRoman(String num) {
         int[] nums = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] res = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
         StringBuilder sb = new StringBuilder();//线程不安全，不能保证原子性，但是效率比StringBuffer高，StringBuffer线程安全
-
+        int number = Integer.parseInt(num);
         for (int i = 0; i < 13; i++){
-            while (num >= nums[i]){
+            while (number >= nums[i]){
                 sb.append(res[i]);
-                num -= nums[i];
+                number -= nums[i];
             }
 
         }
         return sb.toString();
+    }
+
+    /**
+     * 编写一个函数来查找字符串数组中的最长公共前缀。
+     *
+     * 如果不存在公共前缀，返回空字符串 ""。
+     *
+     * 示例 1:
+     *
+     * 输入: ["flower","flow","flight"]
+     * 输出: "fl"
+     *
+     */
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0){
+            return "";
+        }
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0].charAt(i);
+            for (int j = 1; j < strs.length; j++) {
+                if (i == strs[j].length() || c != strs[j].charAt(i)){
+                    return strs[0].substring(0,i);
+                }
+            }
+        }
+        return strs[0];
     }
 
 }
