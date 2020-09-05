@@ -929,19 +929,19 @@ public class Solution {
 
     }
 
-    public int maxArea2(int[] height){
-        int i = 0, j = height.length-1, res = 0;
-        while(i<j){
+    public int maxArea2(int[] height) {
+        int i = 0, j = height.length - 1, res = 0;
+        while (i < j) {
             res = height[i] < height[j] ?
-                    Math.max(res,(j-i)*height[i++]) :
-                    Math.max(res,(j-i)*height[j--]);
+                    Math.max(res, (j - i) * height[i++]) :
+                    Math.max(res, (j - i) * height[j--]);
         }
         return res;
     }
 
     /**
      * 罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。
-     *
+     * <p>
      * 字符          数值
      * I             1
      * V             5
@@ -951,28 +951,29 @@ public class Solution {
      * D             500
      * M             1000
      * 例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。
-     *
+     * <p>
      * 通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，
      * 所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：
-     *
+     * <p>
      * I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。
      * X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 
      * C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
      * 给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内。
-     *
+     * <p>
      * 示例 1:
-     *
+     * <p>
      * 输入: 3
      * 输出: "III"
+     *
      * @param num
      */
     public static String intToRoman(String num) {
         int[] nums = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        String[] res = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+        String[] res = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         StringBuilder sb = new StringBuilder();//线程不安全，不能保证原子性，但是效率比StringBuffer高，StringBuffer线程安全
         int number = Integer.parseInt(num);
-        for (int i = 0; i < 13; i++){
-            while (number >= nums[i]){
+        for (int i = 0; i < 13; i++) {
+            while (number >= nums[i]) {
                 sb.append(res[i]);
                 number -= nums[i];
             }
@@ -983,24 +984,23 @@ public class Solution {
 
     /**
      * 编写一个函数来查找字符串数组中的最长公共前缀。
-     *
+     * <p>
      * 如果不存在公共前缀，返回空字符串 ""。
-     *
+     * <p>
      * 示例 1:
-     *
+     * <p>
      * 输入: ["flower","flow","flight"]
      * 输出: "fl"
-     *
      */
     public String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0){
+        if (strs == null || strs.length == 0) {
             return "";
         }
         for (int i = 0; i < strs[0].length(); i++) {
             char c = strs[0].charAt(i);
             for (int j = 1; j < strs.length; j++) {
-                if (i == strs[j].length() || c != strs[j].charAt(i)){
-                    return strs[0].substring(0,i);
+                if (i == strs[j].length() || c != strs[j].charAt(i)) {
+                    return strs[0].substring(0, i);
                 }
             }
         }
@@ -1017,19 +1017,48 @@ public class Solution {
         int[][] dp = new int[row][column];
         dp[0][0] = grid[0][0];
         for (int i = 1; i < column; i++) {
-            dp[0][i] = dp[0][i-1] + grid[0][i];
+            dp[0][i] = dp[0][i - 1] + grid[0][i];
         }
         for (int j = 1; j < row; j++) {
-            dp[j][0] = dp[j-1][0] + grid[j][0];
+            dp[j][0] = dp[j - 1][0] + grid[j][0];
         }
         for (int i = 1; i < row; i++) {
             for (int j = 1; j < column; j++) {
-                dp[i][j] = Math.min(dp[i-1][j],dp[i][j-1]) + grid[i][j];
+                dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];
             }
         }
-        return dp[row-1][column-1];
+        return dp[row - 1][column - 1];
     }
 
+    public int[] sorted0(int[] a) {
+        int count = 0,other = 0;
+        int len = a.length;
+        int[] zero = new int[len];
+        for (int i = 0; i < len; i++) {
+            if (a[i] == 0) {
+                zero[len-1 - other] = a[i];
+                other++;
+            }else {
+                zero[count] = a[i];
+                count++;
+            }
+        }
+        return zero;
+    }
+
+    public void exclude5() {
+        for (int i = 1; i < 1000; i++) {
+           String temp = String.valueOf(i) ;
+            for (int j = 0; j < temp.length(); j++) {
+                if (temp.charAt(j) == '5'){
+                    break;
+                }
+                if (j == temp.length()-1){
+                    System.out.println(i);
+                }
+            }
+        }
+    }
 }
 
 
