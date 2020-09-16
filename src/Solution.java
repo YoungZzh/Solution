@@ -426,7 +426,8 @@ public class Solution {
      * <p>
      * 　　b、然后在剩下的队列中，看成有左右两个指针（高低）。
      * <p>
-     * 　　c、开始高指针向左移动，如果遇到小于中间值的数据，则将这个数据赋值到低指针空缺，并且将高指针的数据看成空缺值（高指针空缺）。然后先向右移动一下低指针，并且切换低指针移动。
+     * 　　c、开始高指针向左移动，如果遇到小于中间值的数据，则将这个数据赋值到低指针空缺，并且将高指针的数据看成空缺值（高指针空缺）。
+     *      然后先向右移动一下低指针，并且切换低指针移动。
      * <p>
      * 　　d、当低指针移动到大于中间值的时候，赋值到高指针空缺的地方。然后先高指针向左移动，并且切换高指针移动。重复c、d操作。
      * <p>
@@ -462,7 +463,7 @@ public class Solution {
             }
         }
 
-        // 将基准数放到中间的位置（基准数归位）
+        // 当i=j时while循环将终止，将基准数放到中间的位置（基准数归位）
         array[left] = array[i];
         array[i] = base;
 
@@ -1059,6 +1060,60 @@ public class Solution {
             }
         }
     }
+
+    public void judge(int m){
+        if (m % 2 == 0){
+            System.out.println(m + "是偶数！");
+        }else {
+            System.out.println(m + "是奇数！");
+        }
+    }
+
+    /**
+     * 希尔排序
+     * @param arr
+     * @return
+     */
+    public static int[] shellSort(int[] arr){
+        int tem;
+        for (int gap = arr.length / 2; gap > 0; gap /= 2){
+            for (int i = gap; i < arr.length; i++) {
+                for (int j = i - gap; j >= 0; j -= gap) {
+                    if (arr[j] > arr[j + gap]){
+                        tem = arr[j];
+                        arr[j] = arr[j + gap];
+                        arr[j + gap] = tem;
+                    }
+                }
+            }
+        }
+        return arr;
+    }
+
+    public  int[] MergeSort(int[] arr){
+        if (arr.length < 2){
+            return arr;
+        }
+        int mid = arr.length >>> 1;
+        return merge(MergeSort(Arrays.copyOfRange(arr,0,mid)),MergeSort(Arrays.copyOfRange(arr,mid,arr.length)));
+    }
+
+    public int[] merge(int[] left,int[] right){
+        int[] result = new int[left.length + right.length];
+        int i = 0,j = 0;
+        for (int index = 0; index < result.length; index++) {
+            if (i >= left.length) //>=的=不能去除，少了程序为错
+                result[index] = right[j++];
+            else if (j >= right.length)//必须先判断i或者j是否超出范围，如果先判断left[i] > right[j]就会可能出现程序越界出错
+                result[index] = left[i++];
+            else if (left[i] > right[j])
+                result[index] = right[j++];
+            else
+                result[index] = left[i++];
+        }
+        return result;
+    }
+
 }
 
 

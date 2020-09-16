@@ -5,10 +5,11 @@
 public class TestSort {
 
     public static void main(String[] args) {
-        int[] ints = {4, 5, 0, 6, 7, 0, 1};
-        int[] ints1 = new Solution().sorted0(ints);
-        for (int i = 0; i < ints1.length; i++) {
-            System.out.println(ints1[i]);
+       int[] arr = new int[]{8,9,1,7,2,3,5,4,6,0};
+        Solution.Rapid(arr,0,arr.length-1);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
         }
     }
+
 }
