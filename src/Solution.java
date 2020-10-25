@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Author:Young
@@ -427,7 +428,7 @@ public class Solution {
      * 　　b、然后在剩下的队列中，看成有左右两个指针（高低）。
      * <p>
      * 　　c、开始高指针向左移动，如果遇到小于中间值的数据，则将这个数据赋值到低指针空缺，并且将高指针的数据看成空缺值（高指针空缺）。
-     *      然后先向右移动一下低指针，并且切换低指针移动。
+     * 然后先向右移动一下低指针，并且切换低指针移动。
      * <p>
      * 　　d、当低指针移动到大于中间值的时候，赋值到高指针空缺的地方。然后先高指针向左移动，并且切换高指针移动。重复c、d操作。
      * <p>
@@ -1032,14 +1033,14 @@ public class Solution {
     }
 
     public int[] sorted0(int[] a) {
-        int count = 0,other = 0;
+        int count = 0, other = 0;
         int len = a.length;
         int[] zero = new int[len];
         for (int i = 0; i < len; i++) {
             if (a[i] == 0) {
-                zero[len-1 - other] = a[i];
+                zero[len - 1 - other] = a[i];
                 other++;
-            }else {
+            } else {
                 zero[count] = a[i];
                 count++;
             }
@@ -1049,37 +1050,38 @@ public class Solution {
 
     public void exclude5() {
         for (int i = 1; i < 1000; i++) {
-           String temp = String.valueOf(i) ;
+            String temp = String.valueOf(i);
             for (int j = 0; j < temp.length(); j++) {
-                if (temp.charAt(j) == '5'){
+                if (temp.charAt(j) == '5') {
                     break;
                 }
-                if (j == temp.length()-1){
+                if (j == temp.length() - 1) {
                     System.out.println(i);
                 }
             }
         }
     }
 
-    public void judge(int m){
-        if (m % 2 == 0){
+    public void judge(int m) {
+        if (m % 2 == 0) {
             System.out.println(m + "是偶数！");
-        }else {
+        } else {
             System.out.println(m + "是奇数！");
         }
     }
 
     /**
      * 希尔排序
+     *
      * @param arr
      * @return
      */
-    public static int[] shellSort(int[] arr){
+    public static int[] shellSort(int[] arr) {
         int tem;
-        for (int gap = arr.length / 2; gap > 0; gap /= 2){
+        for (int gap = arr.length / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < arr.length; i++) {
                 for (int j = i - gap; j >= 0; j -= gap) {
-                    if (arr[j] > arr[j + gap]){
+                    if (arr[j] > arr[j + gap]) {
                         tem = arr[j];
                         arr[j] = arr[j + gap];
                         arr[j + gap] = tem;
@@ -1090,17 +1092,17 @@ public class Solution {
         return arr;
     }
 
-    public  int[] MergeSort(int[] arr){
-        if (arr.length < 2){
+    public int[] MergeSort(int[] arr) {
+        if (arr.length < 2) {
             return arr;
         }
         int mid = arr.length >>> 1;
-        return merge(MergeSort(Arrays.copyOfRange(arr,0,mid)),MergeSort(Arrays.copyOfRange(arr,mid,arr.length)));
+        return merge(MergeSort(Arrays.copyOfRange(arr, 0, mid)), MergeSort(Arrays.copyOfRange(arr, mid, arr.length)));
     }
 
-    public int[] merge(int[] left,int[] right){
+    public int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
-        int i = 0,j = 0;
+        int i = 0, j = 0;
         for (int index = 0; index < result.length; index++) {
             if (i >= left.length) //>=的=不能去除，少了程序为错
                 result[index] = right[j++];
@@ -1112,6 +1114,360 @@ public class Solution {
                 result[index] = left[i++];
         }
         return result;
+    }
+
+    public static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        for (int i = 0; i < nums.length - 2; i++) {
+            int a1 = nums[i], a2 = nums[i + 1];
+            for (int j = i + 2; j < nums.length; j++) {
+                if (a1 + a2 + nums[j] == 0) {
+                    List<Integer> sort = new ArrayList<>();
+                    sort.add(a1);
+                    sort.add(a2);
+                    sort.add(nums[j]);
+                    result.add(sort);
+                }
+            }
+        }
+        return result;
+    }
+
+    public List<String> letterCombinations(String digits) {
+        List<String> list = new ArrayList<>();
+        if (digits.length() == 0) {
+            return list;
+        }
+        Map<Integer, String> map = new HashMap<>();
+        map.put(2, "abc");
+        map.put(3, "def");
+        map.put(4, "ghi");
+        map.put(5, "jkl");
+        map.put(6, "mno");
+        map.put(7, "pqrs");
+        map.put(8, "tuv");
+        map.put(9, "wxyz");
+        if (digits.length() == 1) {
+            char[] chars = map.get(Integer.valueOf(digits)).toCharArray();
+            for (int i = 0; i < chars.length; i++) {
+                list.add(String.valueOf(chars[i]));
+            }
+            return list;
+        }
+        for (int i = 0; i < digits.length(); i++) {
+            char[] charsA = map.get(Integer.parseInt(digits.substring(i, i + 1))).toCharArray();
+            StringBuilder sb = new StringBuilder();
+            for (int j = i + 1; j < digits.length(); j++) {
+                sb.append(map.get(Integer.parseInt(digits.substring(j, j + 1))));
+            }
+            char[] charsB = sb.toString().toCharArray();
+            int m = 0, n = 0;
+            while (m < charsA.length) {
+                if (n < charsB.length) {
+                    list.add(charsA[m] + "" + charsB[n++]);
+                } else {
+                    n = 0;
+                    m++;
+                }
+            }
+        }
+        return list;
+    }
+
+
+    public List<String> letterCombinations1(String digits) {
+        List<String> combinations = new ArrayList<String>();
+        if (digits.length() == 0) {
+            return combinations;
+        }
+        Map<Character, String> phoneMap = new HashMap<Character, String>() {{
+            put('2', "abc");
+            put('3', "def");
+            put('4', "ghi");
+            put('5', "jkl");
+            put('6', "mno");
+            put('7', "pqrs");
+            put('8', "tuv");
+            put('9', "wxyz");
+        }};
+        backtrack(combinations, phoneMap, digits, 0, new StringBuffer());
+        return combinations;
+    }
+
+    private void backtrack(List<String> combinations, Map<Character, String> phoneMap, String digits, int index, StringBuffer combination) {
+        if (index == digits.length()) {
+            combinations.add(combination.toString());
+        } else {
+            char digit = digits.charAt(index);
+            String letters = phoneMap.get(digit);
+            int lettersCount = letters.length();
+            for (int i = 0; i < lettersCount; i++) {
+                combination.append(letters.charAt(i));
+                backtrack(combinations, phoneMap, digits, index + 1, combination);
+                combination.deleteCharAt(index);
+            }
+        }
+    }
+
+    //合并时间区间
+    public static int[][] merge(int[][] intervals) {
+        if (intervals.length < 2) {
+            return intervals;
+        }
+        int[][] result = new int[intervals.length][2];
+        result[0][0] = intervals[0][0];
+        result[0][1] = intervals[0][1];
+        int j = 0;//标记result下标位置
+        for (int i = 1; i < intervals.length; i++) {
+            if (intervals[i][0] <= result[j][1]) {
+                result[j][1] = intervals[i][1];
+            } else {
+                ++j;
+                result[j][0] = intervals[i][0];
+                result[j][1] = intervals[i][1];
+            }
+        }
+        return Arrays.copyOfRange(result, 0, j + 1);
+    }
+
+    //缩写校验
+    /*
+        例 1：输⼊：s = “internationalization"，abbr = "i12iz4n"
+        返回：true
+     */
+    public static boolean valid(String word, String abbr) {
+        char[] str = word.toCharArray();
+        char[] shrink = abbr.toCharArray();
+        int i = 0, j = 0, sum = 0;
+        while (i < str.length && j < shrink.length) {
+            if (str[i] == shrink[j]) {
+                i++;
+                j++;
+            } else if (shrink[j] >= '0' && shrink[j] <= '9') {
+                sum = sum * 10 + shrink[j] - 48;
+                j++;
+            } else if (str[i] != shrink[j]) {
+                i = i + sum;
+                sum = 0;
+                if (str[i] == shrink[j]) {
+                    i++;
+                    j++;
+                } else
+                    return false;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    int minPath2(int n, int[][] edges, int start, int end) {
+
+        List<int[]> list = Arrays.asList(edges);
+        Map<Integer, List<int[]>> sortedMap = list.stream().collect(Collectors.groupingBy(listi -> listi[0]));
+        int min = searchMin2(sortedMap, start, end);
+        return min == Integer.MAX_VALUE ? -1 : min;
+    }
+
+    public static int searchMin2(Map<Integer, List<int[]>> map, int start, int end) {
+        List<int[]> list = map.get(start);
+        int min = Integer.MAX_VALUE;
+        if (list == null) {//没有以start为开始的通路
+            return min;
+        }
+        for (int[] listi : list) {
+            int next = listi[1];
+            int gap = listi[2];
+            if (next != end) {
+                map.remove(start);
+                int temp = searchMin2(map, next, end);
+                gap = (temp == Integer.MAX_VALUE ? Integer.MAX_VALUE : (gap | searchMin2(map, next, end)));
+                map.put(start, list);
+            }
+            if (gap < min) {
+                min = gap;
+            }
+        }
+        return min;
+    }
+
+    //最⼩惩罚
+    int minPath(int n, int[][] edges, int start, int end) {
+        //根据图的定义可以知道存在的边数
+        int edgeNum = n * (n - 1) / 2;
+        Map<Integer, Map<Integer, Integer>> map = new HashMap<>(edgeNum);
+        //找出每个节点到其它节点的map集合
+        for (int[] edge : edges) {
+            int begin = edge[0];
+            int terminal = edge[1];
+            int gap = edge[2];
+            //如果map中已经存在相应begin的键，那就不需要对应的map空间来存储
+            map.computeIfAbsent(begin, k -> new HashMap<>());
+            //因为两个节点之间最多只存在一条边，那就不用考虑两个节点多次判断的问题
+            map.get(begin).put(terminal, gap);
+        }
+        int min = searchMin(map, start, end);
+        return min == Integer.MAX_VALUE ? -1 : min;
+    }
+
+    public static int searchMin(Map<Integer, Map<Integer, Integer>> map, int start, int end) {
+        Map<Integer, Integer> startMap = map.get(start);
+        int min = Integer.MAX_VALUE;
+        for (Map.Entry<Integer, Integer> forMap : startMap.entrySet()) {
+            int next = forMap.getKey();
+            int gap = forMap.getValue();
+            if (next != end) {
+                map.remove(start);
+                gap = gap | searchMin(map, next, end);
+                map.put(start, startMap);
+            }
+            if (gap < min) {
+                min = gap;
+            }
+        }
+        return min;
+    }
+
+    public List<List<Integer>> fourSumFalse(int[] nums, int target) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (nums == null || nums.length < 4) {
+            return result;
+        }
+
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 3; i++) {
+            if (nums[i] > 0){
+                break;
+            }
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int m = i + 1, n = nums.length - 1;
+            while ((n - m) > 1) {
+                int sum = 0;
+                for (int j = m + 1; j < n; j++) {
+                    sum = nums[i] + nums[m] + nums[n] + nums[j];
+                    if (sum == target) {
+                        result.add(Arrays.asList(nums[i], nums[m], nums[n], nums[j]));
+                        break;
+                    }
+                }
+                if (sum > target) {
+                    while (nums[n] == nums[n - 1]) {
+                        n--;
+                    }
+                    if (nums[n] != nums[n - 1]) {
+                        n--;
+                    }
+                } else if (sum < target) {
+                    while (nums[m] == nums[m + 1]) {
+                        m++;
+                    }
+                    m++;
+                } else {
+                    m++;
+                    n--;
+                }
+            }
+        }
+        return result;
+    }
+
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        /*定义一个返回值*/
+        List<List<Integer>> result=new ArrayList<>();
+        /*当数组为null或元素小于4个时，直接返回*/
+        if(nums==null||nums.length<4){
+            return result;
+        }
+        /*对数组进行从小到大排序*/
+        Arrays.sort(nums);
+        /*数组长度*/
+        int length=nums.length;
+        /*定义4个指针k，i，j，h  k从0开始遍历，i从k+1开始遍历，留下j和h，j指向i+1，h指向数组最大值*/
+        for(int k=0;k<length-3;k++){
+            /*当k的值与前面的值相等时忽略*/
+            if(k>0&&nums[k]==nums[k-1]){
+                continue;
+            }
+            /*获取当前最小值，如果最小值比目标值大，说明后面越来越大的值根本没戏*/
+            int min1=nums[k]+nums[k+1]+nums[k+2]+nums[k+3];
+            if(min1>target){
+                break;
+            }
+            /*获取当前最大值，如果最大值比目标值小，说明后面越来越小的值根本没戏，忽略*/
+            int max1=nums[k]+nums[length-1]+nums[length-2]+nums[length-3];
+            if(max1<target){
+                continue;
+            }
+            /*第二层循环i，初始值指向k+1*/
+            for(int i=k+1;i<length-2;i++){
+                /*当i的值与前面的值相等时忽略*/
+                if(i>k+1&&nums[i]==nums[i-1]){
+                    continue;
+                }
+                /*定义指针j指向i+1*/
+                int j=i+1;
+                /*定义指针h指向数组末尾*/
+                int h=length-1;
+                /*获取当前最小值，如果最小值比目标值大，说明后面越来越大的值根本没戏*/
+                int min=nums[k]+nums[i]+nums[j]+nums[j+1];
+                if(min>target){
+                    break;
+                }
+                /*获取当前最大值，如果最大值比目标值小，说明后面越来越小的值根本没戏，忽略*/
+                int max=nums[k]+nums[i]+nums[h]+nums[h-1];
+                if(max<target){
+                    continue;
+                }
+                /*开始j指针和h指针的表演，计算当前和，如果等于目标值，j++并去重，h--并去重，当当前和大于目标值时h--，当当前和小于目标值时j++*/
+                while (j<h){
+                    int curr=nums[k]+nums[i]+nums[j]+nums[h];
+                    if(curr==target){
+                        result.add(Arrays.asList(nums[k],nums[i],nums[j],nums[h]));
+                        j++;
+                        while(j<h&&nums[j]==nums[j-1]){
+                            j++;
+                        }
+                        h--;
+                        while(j<h&&i<h&&nums[h]==nums[h+1]){
+                            h--;
+                        }
+                    }else if(curr>target){
+                        h--;
+                    }else {
+                        j++;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    public boolean isValid(String s) {
+        if(s.trim().length() == 0){
+            return true;
+        }
+        Map<Character,Character> map = new HashMap<>(){
+            {put('(',')');put('[',']');put('{','}');}
+        };
+        LinkedList<Character> stack = new LinkedList<>();
+        for (Character c : s.toCharArray()){
+            if (map.containsKey(c)){
+                stack.addLast(c);
+            }else {
+                if (!stack.isEmpty()){
+                    if (map.get(stack.removeLast()) == c){
+                        continue;
+                    }
+                }
+                return false;
+            }
+        }
+        if (stack.isEmpty()){
+            return true;
+        }
+        return false;
     }
 
 }
