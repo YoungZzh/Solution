@@ -19,7 +19,7 @@ public class TestSort {
         while (true){
             str = str + new Random().nextInt(88888888) + new Random().nextInt(999999999);
         }*/
-        System.out.println(solution.isValid("{[]}"));
+        //System.out.println(solution.isValid("{[]}"));
 
     }
 }

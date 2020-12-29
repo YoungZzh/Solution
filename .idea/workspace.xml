@@ -2,32 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9953eee1-aa22-4db6-9686-8d7c35f97591" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/ABADemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/AtomicReferenceDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/BlockingQueueDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/CASDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/ContainerNotSafeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/CountDownLatchDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/CountryEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/CyclicBarrierDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/MyData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/ReadWriteLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/ReentrantLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/SemaphoreDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/ShareResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/SingletonDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/SpinLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/SyncAndReentrantLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concurrents/VolatileDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FindsNodePunish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nio/NIOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nio/NIOServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nio/ScatteringAndGathering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/Solution$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Solution$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/Solution$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Solution$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/DeadLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/DirectBufferMemoryDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/GCOverheadLimitDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/HelloGC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/PhantomReferenceDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/ProdConsumer_BlockQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/ProdConsumer_TraditionDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/ReferenceQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/SoftReferenceDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/SynchronousQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/UnableCreateNewThreadDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/WeakHashMapDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrents/WeakReferenceDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/algorithm/Concurrents/MyThreadPoolDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Concurrents/MyThreadPoolDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/algorithm/Solution$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Solution$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/algorithm/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Solution.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/algorithm/TestSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/TestSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestSort.java" afterDir="false" />
     </list>
@@ -51,10 +43,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Concurrents/ReadWriteLockDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/Concurrents/ReferenceQueueDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1232">
-              <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+            <state relative-caret-position="528">
+              <caret line="25" column="50" selection-start-line="20" selection-start-column="8" selection-end-line="25" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,10 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Solution.java">
+        <entry file="file://$PROJECT_DIR$/src/Concurrents/PhantomReferenceDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28842">
-              <caret line="1316" column="29" selection-start-line="1316" selection-start-column="23" selection-end-line="1316" selection-end-column="29" />
+            <state relative-caret-position="528">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,38 +67,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Concurrents/CountDownLatchDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/Concurrents/GCOverheadLimitDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="440">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Concurrents/DirectBufferMemoryDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Concurrents/BlockingQueueDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/Concurrents/UnableCreateNewThreadDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="266" column="11" selection-start-line="266" selection-start-column="11" selection-end-line="266" selection-end-column="11" />
-              <folding>
-                <element signature="e#7397#7398#0" expanded="true" />
-                <element signature="e#7434#7435#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -141,15 +126,12 @@
         <option value="$PROJECT_DIR$/src/FindsNodePunish.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/ShareResource.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/SyncAndReentrantLockDemo.java" />
-        <option value="$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/MyData.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/VolatileDemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/SingletonDemo.java" />
         <option value="$PROJECT_DIR$/src/CASDemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/CASDemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/AtomicReferenceDemo.java" />
-        <option value="$PROJECT_DIR$/src/TestSort.java" />
-        <option value="$PROJECT_DIR$/src/Solution.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/ABADemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/CountryEnum.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/CyclicBarrierDemo.java" />
@@ -160,6 +142,25 @@
         <option value="$PROJECT_DIR$/src/Concurrents/ReadWriteLockDemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/CountDownLatchDemo.java" />
         <option value="$PROJECT_DIR$/src/Concurrents/BlockingQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/SynchronousQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/ProdConsumer_TraditionDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/ProdConsumer_BlockQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/ListNode.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/DeadLockDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/HelloGC.java" />
+        <option value="$PROJECT_DIR$/src/Solution.java" />
+        <option value="$PROJECT_DIR$/src/TestSort.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/SoftReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/WeakReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/WeakHashMapDemo.java" />
+        <option value="$PROJECT_DIR$/src/WeakReferenceQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/WeakReferenceQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/ReferenceQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/PhantomReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/GCOverheadLimitDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/DirectBufferMemoryDemo.java" />
+        <option value="$PROJECT_DIR$/src/Concurrents/UnableCreateNewThreadDemo.java" />
       </list>
     </option>
   </component>
@@ -178,10 +179,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="755" />
-    <option name="width" value="1265" />
-    <option name="height" value="1060" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1000" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -192,6 +193,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,23 +212,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Concurrents" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="nio" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../项目/zq_mall_be/zq_mall_be" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SunSeaGear/wind/wind-server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -247,9 +242,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BlockingQueueDemo">
-    <configuration name="BlockingQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Concurrents.BlockingQueueDemo" />
+  <component name="RunManager" selected="Application.UnableCreateNewThreadDemo">
+    <configuration name="DirectBufferMemoryDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Concurrents.DirectBufferMemoryDemo" />
+      <module name="algorithm" />
+      <option name="VM_PARAMETERS" value="-Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Concurrents.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GCOverheadLimitDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Concurrents.GCOverheadLimitDemo" />
+      <module name="algorithm" />
+      <option name="VM_PARAMETERS" value="-Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Concurrents.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhantomReferenceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Concurrents.PhantomReferenceDemo" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -261,8 +284,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContainerNotSafeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Concurrents.ContainerNotSafeDemo" />
+    <configuration name="ReferenceQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Concurrents.ReferenceQueueDemo" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -274,35 +297,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadWriteLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Concurrents.ReadWriteLockDemo" />
+    <configuration name="UnableCreateNewThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Concurrents.UnableCreateNewThreadDemo" />
       <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Concurrents.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReentrantLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Concurrents.ReentrantLockDemo" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Concurrents.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpinLockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Concurrents.SpinLockDemo" />
-      <module name="algorithm" />
+      <option name="VM_PARAMETERS" value="-Xms5m -Xmx5m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Concurrents.*" />
@@ -314,19 +312,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ContainerNotSafeDemo" />
-      <item itemvalue="Application.ReentrantLockDemo" />
-      <item itemvalue="Application.SpinLockDemo" />
-      <item itemvalue="Application.ReadWriteLockDemo" />
-      <item itemvalue="Application.BlockingQueueDemo" />
+      <item itemvalue="Application.ReferenceQueueDemo" />
+      <item itemvalue="Application.PhantomReferenceDemo" />
+      <item itemvalue="Application.GCOverheadLimitDemo" />
+      <item itemvalue="Application.DirectBufferMemoryDemo" />
+      <item itemvalue="Application.UnableCreateNewThreadDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BlockingQueueDemo" />
-        <item itemvalue="Application.ReadWriteLockDemo" />
-        <item itemvalue="Application.SpinLockDemo" />
-        <item itemvalue="Application.ReentrantLockDemo" />
-        <item itemvalue="Application.ContainerNotSafeDemo" />
+        <item itemvalue="Application.UnableCreateNewThreadDemo" />
+        <item itemvalue="Application.DirectBufferMemoryDemo" />
+        <item itemvalue="Application.GCOverheadLimitDemo" />
+        <item itemvalue="Application.PhantomReferenceDemo" />
+        <item itemvalue="Application.ReferenceQueueDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -423,7 +421,20 @@
       <workItem from="1603434036857" duration="1435000" />
       <workItem from="1603465354640" duration="27000" />
       <workItem from="1603545895139" duration="1269000" />
-      <workItem from="1603611272854" duration="5229000" />
+      <workItem from="1603611272854" duration="9028000" />
+      <workItem from="1603693567189" duration="3826000" />
+      <workItem from="1603805263786" duration="15000" />
+      <workItem from="1603852733817" duration="740000" />
+      <workItem from="1603958938619" duration="4316000" />
+      <workItem from="1604065079068" duration="2586000" />
+      <workItem from="1604151004753" duration="1619000" />
+      <workItem from="1604302911634" duration="54000" />
+      <workItem from="1604323256839" duration="1856000" />
+      <workItem from="1604388475687" duration="8795000" />
+      <workItem from="1605427411888" duration="5726000" />
+      <workItem from="1605968352069" duration="2896000" />
+      <workItem from="1606022355614" duration="2155000" />
+      <workItem from="1606314331408" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="算法练习题">
       <created>1592290718899</created>
@@ -548,7 +559,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266781000" />
+    <option name="totallyTimeSpent" value="305273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,11 +571,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="604" y="0" width="1012" height="848" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47572815" weight="0.26939204" />
-      <window_info id="Structure" order="1" sideWeight="0.52427185" side_tool="true" weight="0.31236896" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4698795" visible="true" weight="0.23659517" />
+      <window_info id="Structure" order="1" sideWeight="0.5301205" side_tool="true" weight="0.17895442" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -572,15 +582,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32078102" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39805827" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3380481" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39745402" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32871014" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3300423" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50065106" side_tool="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3281471" />
-      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Problems" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49934897" weight="0.3281471" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32871014" />
@@ -595,8 +605,8 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47572815" visible="true" weight="0.40880504" />
-      <window_info id="Structure" order="1" sideWeight="0.52427185" side_tool="true" visible="true" weight="0.40880504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4698795" visible="true" weight="0.29423591" />
+      <window_info id="Structure" order="1" sideWeight="0.5301205" side_tool="true" weight="0.17895442" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -604,15 +614,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31541726" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39805827" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34653464" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39745402" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32871014" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3300423" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50065106" side_tool="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3281471" />
-      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Problems" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49934897" weight="0.3281471" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32871014" />
@@ -687,176 +697,7 @@
     <MESSAGE value="增加了leetcode的第13题" />
     <option name="LAST_COMMIT_MESSAGE" value="增加了leetcode的第13题" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>1455</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24464">
-          <caret line="1173" column="11" selection-start-line="1173" selection-start-column="11" selection-end-line="1173" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10098">
-          <caret line="508" column="11" selection-start-line="508" selection-start-column="11" selection-end-line="508" selection-end-column="11" />
-          <folding>
-            <element signature="e#27816#27817#0" expanded="true" />
-            <element signature="e#27865#27866#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/locks/ReentrantLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="107" column="40" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/locks/Lock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="135" column="16" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="233" column="21" lean-forward="true" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="28" />
-          <folding>
-            <element signature="e#8688#8689#0" expanded="true" />
-            <element signature="e#8727#8728#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="146" column="16" lean-forward="true" selection-start-line="146" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="3744" column="44" selection-start-line="3744" selection-start-column="44" selection-end-line="3744" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="243" column="29" lean-forward="true" selection-start-line="243" selection-start-column="27" selection-end-line="243" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/StringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="108" column="7" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/StringBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="222" column="18" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/CASDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="122" column="7" lean-forward="true" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4669">
-          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/ShareResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/MyData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/VolatileDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="102" selection-start-line="28" selection-start-column="102" selection-end-line="28" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/SyncAndReentrantLockDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Concurrents/SingletonDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -878,13 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="27" column="108" selection-start-line="27" selection-start-column="108" selection-end-line="27" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -964,26 +798,6 @@
             <element signature="e#3794#3795#0" expanded="true" />
             <element signature="e#7999#8000#0" expanded="true" />
             <element signature="e#8047#8048#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/SemaphoreDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/CyclicBarrierDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1111,6 +925,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/SynchronousQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="541" column="17" selection-start-line="541" selection-start-column="12" selection-end-line="541" selection-end-column="17" />
+          <folding>
+            <element signature="e#34822#34823#0" expanded="true" />
+            <element signature="e#34849#34850#0" expanded="true" />
+            <element signature="e#35123#35124#0" expanded="true" />
+            <element signature="e#35206#35207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Plalindrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/CountDownLatchDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/CyclicBarrierDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/SemaphoreDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="124" column="11" selection-start-line="124" selection-start-column="11" selection-end-line="124" selection-end-column="11" />
+          <folding>
+            <element signature="e#4455#4456#0" expanded="true" />
+            <element signature="e#4507#4508#0" expanded="true" />
+            <element signature="e#4926#4927#0" expanded="true" />
+            <element signature="e#4969#4970#0" expanded="true" />
+            <element signature="e#5434#5435#0" expanded="true" />
+            <element signature="e#5492#5493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListNode.java" />
     <entry file="file://$PROJECT_DIR$/src/Concurrents/ReadWriteLockDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1232">
@@ -1121,20 +1001,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solution.java">
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/MyThreadPoolDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28842">
-          <caret line="1316" column="29" selection-start-line="1316" selection-start-column="23" selection-end-line="1316" selection-end-column="29" />
+        <state relative-caret-position="308">
+          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/DeadLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3806">
+          <caret line="216" column="34" selection-start-line="216" selection-start-column="34" selection-end-line="216" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/BlockingQueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/CountDownLatchDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/SynchronousQueueDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="814">
+          <caret line="39" column="98" selection-start-line="39" selection-start-column="98" selection-end-line="39" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/ProdConsumer_TraditionDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/ProdConsumer_BlockQueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="73" column="72" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1143,7 +1064,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="4730">
           <caret line="266" column="11" selection-start-line="266" selection-start-column="11" selection-end-line="266" selection-end-column="11" />
           <folding>
             <element signature="e#7397#7398#0" expanded="true" />
@@ -1152,13 +1073,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Concurrents/BlockingQueueDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        <state relative-caret-position="33176">
+          <caret line="1515" column="5" selection-start-line="1515" selection-start-column="5" selection-end-line="1515" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/HelloGC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/SoftReferenceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding>
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/WeakReferenceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/WeakHashMapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/WeakHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="702" column="25" selection-start-line="702" selection-start-column="25" selection-end-line="702" selection-end-column="25" />
+          <folding>
+            <element signature="e#9541#9542#0" expanded="true" />
+            <element signature="e#9608#9609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/ReferenceQueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="50" selection-start-line="20" selection-start-column="8" selection-end-line="25" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/PhantomReferenceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/GCOverheadLimitDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/DirectBufferMemoryDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Concurrents/UnableCreateNewThreadDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
         </state>
       </provider>
     </entry>

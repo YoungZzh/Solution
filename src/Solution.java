@@ -1336,7 +1336,7 @@ public class Solution {
 
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 3; i++) {
-            if (nums[i] > 0){
+            if (nums[i] > 0) {
                 break;
             }
             if (i > 0 && nums[i] == nums[i - 1]) {
@@ -1375,67 +1375,67 @@ public class Solution {
 
     public List<List<Integer>> fourSum(int[] nums, int target) {
         /*定义一个返回值*/
-        List<List<Integer>> result=new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
         /*当数组为null或元素小于4个时，直接返回*/
-        if(nums==null||nums.length<4){
+        if (nums == null || nums.length < 4) {
             return result;
         }
         /*对数组进行从小到大排序*/
         Arrays.sort(nums);
         /*数组长度*/
-        int length=nums.length;
+        int length = nums.length;
         /*定义4个指针k，i，j，h  k从0开始遍历，i从k+1开始遍历，留下j和h，j指向i+1，h指向数组最大值*/
-        for(int k=0;k<length-3;k++){
+        for (int k = 0; k < length - 3; k++) {
             /*当k的值与前面的值相等时忽略*/
-            if(k>0&&nums[k]==nums[k-1]){
+            if (k > 0 && nums[k] == nums[k - 1]) {
                 continue;
             }
             /*获取当前最小值，如果最小值比目标值大，说明后面越来越大的值根本没戏*/
-            int min1=nums[k]+nums[k+1]+nums[k+2]+nums[k+3];
-            if(min1>target){
+            int min1 = nums[k] + nums[k + 1] + nums[k + 2] + nums[k + 3];
+            if (min1 > target) {
                 break;
             }
             /*获取当前最大值，如果最大值比目标值小，说明后面越来越小的值根本没戏，忽略*/
-            int max1=nums[k]+nums[length-1]+nums[length-2]+nums[length-3];
-            if(max1<target){
+            int max1 = nums[k] + nums[length - 1] + nums[length - 2] + nums[length - 3];
+            if (max1 < target) {
                 continue;
             }
             /*第二层循环i，初始值指向k+1*/
-            for(int i=k+1;i<length-2;i++){
+            for (int i = k + 1; i < length - 2; i++) {
                 /*当i的值与前面的值相等时忽略*/
-                if(i>k+1&&nums[i]==nums[i-1]){
+                if (i > k + 1 && nums[i] == nums[i - 1]) {
                     continue;
                 }
                 /*定义指针j指向i+1*/
-                int j=i+1;
+                int j = i + 1;
                 /*定义指针h指向数组末尾*/
-                int h=length-1;
+                int h = length - 1;
                 /*获取当前最小值，如果最小值比目标值大，说明后面越来越大的值根本没戏*/
-                int min=nums[k]+nums[i]+nums[j]+nums[j+1];
-                if(min>target){
+                int min = nums[k] + nums[i] + nums[j] + nums[j + 1];
+                if (min > target) {
                     break;
                 }
                 /*获取当前最大值，如果最大值比目标值小，说明后面越来越小的值根本没戏，忽略*/
-                int max=nums[k]+nums[i]+nums[h]+nums[h-1];
-                if(max<target){
+                int max = nums[k] + nums[i] + nums[h] + nums[h - 1];
+                if (max < target) {
                     continue;
                 }
                 /*开始j指针和h指针的表演，计算当前和，如果等于目标值，j++并去重，h--并去重，当当前和大于目标值时h--，当当前和小于目标值时j++*/
-                while (j<h){
-                    int curr=nums[k]+nums[i]+nums[j]+nums[h];
-                    if(curr==target){
-                        result.add(Arrays.asList(nums[k],nums[i],nums[j],nums[h]));
+                while (j < h) {
+                    int curr = nums[k] + nums[i] + nums[j] + nums[h];
+                    if (curr == target) {
+                        result.add(Arrays.asList(nums[k], nums[i], nums[j], nums[h]));
                         j++;
-                        while(j<h&&nums[j]==nums[j-1]){
+                        while (j < h && nums[j] == nums[j - 1]) {
                             j++;
                         }
                         h--;
-                        while(j<h&&i<h&&nums[h]==nums[h+1]){
+                        while (j < h && i < h && nums[h] == nums[h + 1]) {
                             h--;
                         }
-                    }else if(curr>target){
+                    } else if (curr > target) {
                         h--;
-                    }else {
+                    } else {
                         j++;
                     }
                 }
@@ -1445,30 +1445,94 @@ public class Solution {
     }
 
     public boolean isValid(String s) {
-        if(s.trim().length() == 0){
+        if (s.trim().length() == 0) {
             return true;
         }
-        Map<Character,Character> map = new HashMap<>(){
-            {put('(',')');put('[',']');put('{','}');}
+        Map<Character, Character> map = new HashMap<>() {
+            {
+                put('(', ')');
+                put('[', ']');
+                put('{', '}');
+            }
         };
         LinkedList<Character> stack = new LinkedList<>();
-        for (Character c : s.toCharArray()){
-            if (map.containsKey(c)){
+        for (Character c : s.toCharArray()) {
+            if (map.containsKey(c)) {
                 stack.addLast(c);
-            }else {
-                if (!stack.isEmpty()){
-                    if (map.get(stack.removeLast()) == c){
+            } else {
+                if (!stack.isEmpty()) {
+                    if (map.get(stack.removeLast()) == c) {
                         continue;
                     }
                 }
                 return false;
             }
         }
-        if (stack.isEmpty()){
+        if (stack.isEmpty()) {
             return true;
         }
         return false;
     }
+
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
+        }
+        ListNode result = new ListNode(0);
+        ListNode cur = result;
+        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(new Comparator<ListNode>() {
+            @Override
+            public int compare(ListNode o1, ListNode o2) {
+                return o1.val - o2.val;
+            }
+        });
+        for (ListNode node : lists) {
+            if (node == null) {
+                continue;
+            }
+            priorityQueue.add(node);
+        }
+        while (!priorityQueue.isEmpty()) {
+            ListNode listNode = priorityQueue.poll();
+            cur.next = listNode;
+            cur = cur.next;
+            if (listNode.next != null) {
+                priorityQueue.add(listNode.next);
+            }
+        }
+        return result.next;
+    }
+
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (k <= 0 || n < k) {
+            return res;
+        }
+        // 从 1 开始是题目的设定
+        Deque<Integer> path = new ArrayDeque<>();
+        dfs(n, k, 1, path, res);
+        return res;
+    }
+
+    private void dfs(int n, int k, int begin, Deque<Integer> path, List<List<Integer>> res) {
+        // 递归终止条件是：path 的长度等于 k
+        if (path.size() == k) {
+            res.add(new ArrayList<>(path));
+            return;
+        }
+
+        // 遍历可能的搜索起点
+        for (int i = begin; i <= n; i++) {
+            // 向路径变量里添加一个数
+            path.addLast(i);
+            // 下一轮搜索，设置的搜索起点要加 1，因为组合数理不允许出现重复的元素
+            dfs(n, k, i + 1, path, res);
+            // 重点理解这里：深度优先遍历有回头的过程，因此递归之前做了什么，递归之后需要做相同操作的逆向操作
+            path.removeLast();
+        }
+    }
+
 
 }
 
